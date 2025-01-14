@@ -1,1 +1,1 @@
-# sql-mysql-refresher
+# SQL - MySQL Refresher
