@@ -44,3 +44,5 @@ CREATE TABLE employees
 DESC employees;
 
 DROP TABLE employees;
+
+SHOW TABLES;
