@@ -28,7 +28,7 @@ VALUES ('Linda', 'Belcher', 45),
 SELECT *
 FROM people;
 
-DROP TABLE people;
+# DROP TABLE people;
 
 CREATE TABLE employees
 (
@@ -43,6 +43,6 @@ CREATE TABLE employees
 
 DESC employees;
 
-DROP TABLE employees;
+# DROP TABLE employees;
 
 SHOW TABLES;

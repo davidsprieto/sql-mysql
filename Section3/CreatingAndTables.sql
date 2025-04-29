@@ -29,6 +29,6 @@ SHOW COLUMNS FROM users;
 
 DESC users;
 
-DROP TABLE users;
+# DROP TABLE users;
 
 SHOW TABLES;
