@@ -2,47 +2,41 @@ USE Test_db;
 
 SELECT database();
 
-INSERT INTO users (username, email, password)
-VALUES ('johndoe', 'johndoe@test.com', 'Xbcc456igFV'),
-       ('janedoe', 'janedoe@test.com', 'NjualdMNd4098');
+INSERT INTO users (first_name, last_name, username, email, password)
+VALUES ('john', 'doe', 'johndoe', 'johndoe@test.com', 'hashedpassword');
+
+INSERT INTO user_information (id, date_of_birth, ssn, job_status, job_field)
+VALUES (LAST_INSERT_ID(), '1991-01-01', '001000000', 'employed', 'information technology');
+
+
+INSERT INTO users (first_name, last_name, username, email, password)
+VALUES ('jane', 'doe', 'janedoe', 'janedoe@test.com', 'hashedpassword');
+
+INSERT INTO user_information (id, date_of_birth, ssn, job_status, job_field)
+VALUES (LAST_INSERT_ID(), '1992-02-02', '002000000', 'employed', 'accounting');
+
+
+INSERT INTO users (first_name, last_name, username, email, password)
+VALUES ('jimmy', 'john', 'jimmyjohn', 'jimmyjohn@test.com', 'hashedpassword');
+
+INSERT INTO user_information (id, date_of_birth, ssn)
+VALUES (LAST_INSERT_ID(), '1993-03-03', '003000000');
+
+
+INSERT INTO users (first_name, last_name, username, email, password)
+VALUES ('joseph', 'ryan', 'josephryan', 'josephryan@test.com', 'hashedpassword');
+
+INSERT INTO user_information (id, date_of_birth, ssn, job_status, job_field)
+VALUES (LAST_INSERT_ID(), '1994-04-04', '004000000', 'employed', 'human resources');
 
 SELECT *
 FROM users;
 
-CREATE TABLE people
-(
-    id         INT UNSIGNED AUTO_INCREMENT,
-    first_name VARCHAR(20)  NOT NULL,
-    last_name  VARCHAR(20)  NOT NULL,
-    age        INT UNSIGNED NOT NULL,
-    PRIMARY KEY (id)
-);
-
-DESC people;
-
-INSERT INTO people (first_name, last_name, age)
-VALUES ('Linda', 'Belcher', 45),
-       ('Phillip', 'Frond', 38),
-       ('Calvin', 'Fischer', 70);
-
 SELECT *
-FROM people;
+FROM user_information;
 
-# DROP TABLE people;
+# DROP TABLE users;
 
-CREATE TABLE employees
-(
-    id INT UNSIGNED AUTO_INCREMENT,
-    last_name VARCHAR(100) NOT NULL,
-    first_name VARCHAR(100) NOT NULL,
-    middle_name VARCHAR(100),
-    age INT UNSIGNED NOT NULL,
-    current_status VARCHAR(100) NOT NULL DEFAULT 'employed',
-    PRIMARY KEY (id)
-);
-
-DESC employees;
-
-# DROP TABLE employees;
+# DROP TABLE user_information;
 
 SHOW TABLES;
