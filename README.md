@@ -1,1 +1,1 @@
-<h1 align=center>SQL - MySQL Refresher</h1>
+<h1 align=center>SQL - MySQL</h1>
